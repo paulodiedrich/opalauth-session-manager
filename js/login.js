@@ -1,5 +1,5 @@
 
-const botaoEnviar =document.querySelector("#btn-enviar");
+const botaoEnviar = document.querySelector("#btn-enviar");
 
 // botaoenviar.addEventListener("click", function() {
 //     console.log("TESTE")
@@ -12,6 +12,11 @@ function validaCampo() {
     const campoSenha = document.getElementById("input-senha");
     let valorCampo = parseInt(campoSenha.value);
 
-// Verificando se a senha é PAR:
-console.log(valorCampo % 2 == 0);
+    // Verificando se a senha é PAR:
+    console.log(valorCampo % 2 == 0);
+
+    // Simulação de HASH
+    const valorHash = valorCampo ** 2;
+    console.log(valorHash);
+
 }
