@@ -1,21 +1,28 @@
 
-const botaoEnviar = document.querySelector("main > button");
+// Capturando os dados do campo SENHA:
 
-botaoEnviar.addEventListener("click", function() {
-  console.log("TESTE");
-});
+
+const botaoEnviar = document.querySelector("#btn-entrar");
+
+botaoEnviar.addEventListener("click", validaCampo);
 
 function validaCampo(){
-// capturando os dados do campo senha
-const campoSenha = document.getElementById("input-senha");
-let valorCampo = parseInt(campoSenha.value);
+    const campoSenha = document.getElementById("input-senha");
+    let valorCampo = parseInt(campoSenha.value);
 
 
-//verificando se a senha é PAR
-console.log(valorCampo % 2 == 0);
+    console.log(valorCampo % 2 == 0);
 
-//simulação de hash
 
-const valorHash = valorCampo** 2;
-console.log(valorHash);
+    // Simulacao de HASH
+    const valorHash = valorCampo**
+    console.log(valorHash);
+
+
 }
+
+
+
+
+
+
