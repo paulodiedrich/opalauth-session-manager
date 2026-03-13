@@ -29,3 +29,32 @@ function validaCampo(){
     console.log("Senha modificada:", valorHash);
 }
 
+// #ISSUE - 2
+// #ISSUE - 3
+
+// Criação da Base (Pág. 21, 32):
+// Criar um Array de Objetos chamado listaUsuarios contendo exatamente 3 usuários:
+const listaUsuarios = [
+    {
+        usuario: "admin",
+        senhaOriginal: 2026,
+        perfil: "Comandante"
+    },
+    {
+        usuario: "gestor",
+        senhaOriginal: 1010,
+        perfil: "Supervisor"
+    },
+    {
+        usuario: "aluno",
+        senhaOriginal: 5050,
+        perfil: "Operador"
+    }
+];
+
+//  Página de Destino:
+//  Criar o arquivo dashboard.html com o código fornecido pelo professor.
+//  Teste de Tipo (Pág. 22):
+// No console, use console.log(typeof listaUsuarios) e console.table(listaUsuarios) para validar a estrutura.
+console.log(typeof listaUsuarios);
+console.table(listaUsuarios);
