@@ -238,3 +238,27 @@ const listaUsuarios = [
 // No console, use console.log(typeof listaUsuarios) e console.table(listaUsuarios) para validar a estrutura.
 console.log(typeof listaUsuarios);
 console.table(listaUsuarios);
+
+
+// ISSUE - 4:
+const btnLogin = document.querySelector("#btn-entrar");
+btnLogin.addEventListener("click", (event) => {
+    event.preventDefault();
+    const usuarioDigitado = document.querySelector('#input-usuario').value;
+    const senhaDigitada = parseInt(document.querySelector('#input-senha').value);
+    const usuarioEncontrado = listaUsuarios.find(u =>
+        u.usuario === usuarioDigitado && u.senhaOriginal === senhaDigitada);
+
+    console.log("Tipo do retorno:", typeof usuarioEncontrado);
+    const statusSessao = document.querySelector('#status-sessao');
+
+    if (usuarioEncontrado) {
+        alert("Acesso Autorizado");
+        window.location.href = "dashboard.html";
+    } else {
+        statusSessao.textContent = "Usuário ou Senha inválidos";
+        statusSessao.style.color = "red";
+    }
+});
+
+
