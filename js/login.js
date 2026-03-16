@@ -261,4 +261,26 @@ btnLogin.addEventListener("click", (event) => {
     }
 });
 
+// Garantir que o sistema "lembre" quem é o piloto logado, permitindo que o nome dele apareça corretamente no Dashboard.
+// 🛠️ Atividades
+//Gravação de Dados:
+//  Após o login ser aprovado na Issue #04, utilize o Spread Operador (...) para criar um objeto de "Sessão Ativa" contendo os dados do usuário.
 
+//     Armazenamento: Salve esse objeto no LocalStorage ou SessionStorage utilizando JSON.stringify().
+
+// Recuperação no Dashboard: No arquivo do Dashboard, recupere o nome do piloto e utilize a 
+// Desestruturação (Destructuring) (Pág. 66) para extrair o nome e o perfil.
+// Exibição (DOM): Insira o nome do piloto no elemento <h1> do Dashboard para personalizar a recepção.
+        // Gravação de Dados com Spread Operator
+        const sessaoAtiva = { ...usuarioEncontrado, dataLogin: new Date().toLocaleString() };
+
+        // Armazenamento no SessionStorage
+        sessionStorage.setItem("usuario-logado", JSON.stringify(sessaoAtiva));
+
+ 
+
+
+
+
+
+ 
